@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Books | Smart Digital Library</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/books.css">
+
+</head>
+
+<body>
+
+<!-- ===================== HEADER ===================== -->
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+
+<i class="fa-solid fa-book-open-reader"></i>
+
+<span>Smart Library</span>
+
+</div>
+
+<ul class="nav-menu">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="books.html" class="active">Books</a></li>
+
+<li><a href="categories.html">Categories</a></li>
+
+<li><a href="digital-library.html">Digital Library</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+<div class="buttons">
+
+<button onclick="location.href='login.html'">
+Login
+</button>
+
+<button onclick="location.href='register.html'">
+Register
+</button>
+
+</div>
+
+</nav>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="books-hero">
+
+<div class="overlay">
+
+<h1>Library Books</h1>
+
+<p>
+
+Search thousands of books,
+notes and journals.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= SEARCH ================= -->
+
+<section class="search-section">
+
+<div class="search-box">
+
+<input
+type="text"
+id="searchBook"
+placeholder="Search by Book Name...">
+
+<button id="searchBtn">
+
+<i class="fas fa-search"></i>
+
+Search
+
+</button>
+
+</div>
+
+<div class="filters">
+
+<select id="categoryFilter">
+
+<option value="">All Categories</option>
+
+<option>Computer Engineering</option>
+
+<option>Information Technology</option>
+
+<option>Mechanical</option>
+
+<option>Electrical</option>
+
+<option>Civil</option>
+
+<option>Electronics</option>
+
+<option>Artificial Intelligence</option>
+
+<option>Mathematics</option>
+
+<option>Science</option>
+
+<option>Previous Year Papers</option>
+
+</select>
+
+<select id="sortBooks">
+
+<option value="">Sort</option>
+
+<option value="az">A-Z</option>
+
+<option value="za">Z-A</option>
+
+<option value="new">Newest</option>
+
+<option value="popular">Popular</option>
+
+</select>
+
+</div>
+
+</section>
+
+<!-- ================= BOOKS ================= -->
+
+<section class="books-container">
+
+<div class="section-title">
+
+<h2>Featured Books</h2>
+
+<p>
+
+Explore our latest collection.
+
+</p>
+
+</div>
+
+<div class="books-grid">
+
+<!-- CARD 1 -->
+
+<div class="book-card">
+
+<img src="images/books/book1.jpg">
+
+<div class="book-info">
+
+<h3>HTML & CSS</h3>
+
+<p>Author : Jon Duckett</p>
+
+<span>Computer Engineering</span>
+
+<div class="rating">
+
+★★★★★
+
+</div>
+
+<div class="book-buttons">
+
+<button class="view-btn">
+
+View Details
+
+</button>
+
+<button class="borrow-btn">
+
+Borrow
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- CARD 2 -->
+
+<div class="book-card">
+
+<img src="images/books/book2.jpg">
+
+<div class="book-info">
+
+<h3>Java Programming</h3>
+
+<p>Author : Herbert Schildt</p>
+
+<span>Programming</span>
+
+<div class="rating">
+
+★★★★★
+
+</div>
+
+<div class="book-buttons">
+
+<button class="view-btn">
+
+View Details
+
+</button>
+
+<button class="borrow-btn">
+
+Borrow
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- CARD 3 -->
+
+<div class="book-card">
+
+<img src="images/books/book3.jpg">
+
+<div class="book-info">
+
+<h3>Python</h3>
+
+<p>Author : Mark Lutz</p>
+
+<span>Programming</span>
+
+<div class="rating">
+
+★★★★★
+
+</div>
+
+<div class="book-buttons">
+
+<button class="view-btn">
+
+View Details
+
+</button>
+
+<button class="borrow-btn">
+
+Borrow
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- CARD 4 -->
+
+<div class="book-card">
+
+<img src="images/books/book4.jpg">
+
+<div class="book-info">
+
+<h3>Database System</h3>
+
+<p>Author : Korth</p>
+
+<span>Database</span>
+
+<div class="rating">
+
+★★★★☆
+
+</div>
+
+<div class="book-buttons">
+
+<button class="view-btn">
+
+View Details
+
+</button>
+
+<button class="borrow-btn">
+
+Borrow
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= PAGINATION ================= -->
+
+<section class="pagination">
+
+<button>
+
+<i class="fas fa-angle-left"></i>
+
+</button>
+
+<button class="active">1</button>
+
+<button>2</button>
+
+<button>3</button>
+
+<button>4</button>
+
+<button>
+
+<i class="fas fa-angle-right"></i>
+
+</button>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<p>
+
+© 2026 Smart Digital Library
+
+<br>
+
+Designed By
+
+<strong>Mohit Kadav</strong>
+
+</p>
+
+</footer>
+
+<script src="js/books.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,261 @@
+/* ===============================
+   Google Font
+=============================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+}
+
+/* ===============================
+   Container
+=============================== */
+
+.container{
+    width:95%;
+    max-width:1400px;
+    margin:40px auto;
+}
+
+/* ===============================
+   Header
+=============================== */
+
+.page-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+    flex-wrap:wrap;
+}
+
+.page-header h1{
+    color:#2563eb;
+    font-size:32px;
+    margin-bottom:8px;
+}
+
+.page-header p{
+    color:#666;
+}
+
+/* ===============================
+   Card
+=============================== */
+
+.return-card{
+    background:#fff;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    margin-bottom:30px;
+}
+
+.return-card h2{
+    color:#2563eb;
+    margin-bottom:25px;
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.input-box{
+    display:flex;
+    flex-direction:column;
+}
+
+.input-box label{
+    margin-bottom:8px;
+    font-weight:600;
+}
+
+.input-box input,
+.input-box select{
+
+    padding:13px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    outline:none;
+    font-size:15px;
+}
+
+.input-box input:focus,
+.input-box select:focus{
+
+    border-color:#2563eb;
+
+}
+
+#returnBtn{
+
+    margin-top:25px;
+    padding:14px 25px;
+    border:none;
+    background:#2563eb;
+    color:#fff;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+
+}
+
+#returnBtn:hover{
+
+    background:#1d4ed8;
+
+}
+
+/* ===============================
+   Search
+=============================== */
+
+.search-box{
+
+    margin-bottom:25px;
+
+}
+
+.search-box input{
+
+    width:100%;
+    padding:14px;
+    border:1px solid #ccc;
+    border-radius:8px;
+
+}
+
+/* ===============================
+   Table
+=============================== */
+
+.table-container{
+
+    overflow-x:auto;
+
+}
+
+table{
+
+    width:100%;
+    border-collapse:collapse;
+    background:#fff;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
+
+}
+
+thead{
+
+    background:#2563eb;
+    color:#fff;
+
+}
+
+th,td{
+
+    padding:15px;
+    text-align:center;
+
+}
+
+tbody tr:nth-child(even){
+
+    background:#f8fafc;
+
+}
+
+tbody tr:hover{
+
+    background:#eef4ff;
+
+}
+
+/* ===============================
+   Status
+=============================== */
+
+.status{
+
+    padding:6px 12px;
+    border-radius:20px;
+    color:#fff;
+    font-size:13px;
+    display:inline-block;
+
+}
+
+.returned{
+
+    background:#10b981;
+
+}
+
+/* ===============================
+   Fine
+=============================== */
+
+.fine{
+
+    color:#ef4444;
+    font-weight:700;
+
+}
+
+/* ===============================
+   Toast
+=============================== */
+
+.toast{
+
+    position:fixed;
+    top:30px;
+    right:30px;
+    background:#10b981;
+    color:#fff;
+    padding:15px 25px;
+    border-radius:10px;
+    transform:translateX(300px);
+    transition:.4s;
+    z-index:9999;
+}
+
+.toast.show{
+
+    transform:translateX(0);
+
+}
+
+/* ===============================
+   Responsive
+=============================== */
+
+@media(max-width:768px){
+
+.form-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.page-header{
+
+flex-direction:column;
+align-items:flex-start;
+gap:15px;
+
+}
+
+}

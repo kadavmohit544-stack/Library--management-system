@@ -1,0 +1,536 @@
+/* ==========================================
+   COMMON.CSS
+   Smart Library Management System
+========================================== */
+
+/* Google Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Reset */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+    color:#1e293b;
+    overflow-x:hidden;
+}
+
+/* ==========================================
+   Sidebar
+========================================== */
+
+.sidebar{
+
+    position:fixed;
+
+    left:0;
+
+    top:0;
+
+    width:260px;
+
+    height:100vh;
+
+    background:#1e293b;
+
+    color:white;
+
+    transition:.3s;
+
+    z-index:1000;
+
+}
+
+.sidebar .logo{
+
+    height:80px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:26px;
+
+    font-weight:700;
+
+    border-bottom:1px solid rgba(255,255,255,.1);
+
+}
+
+.sidebar ul{
+
+    list-style:none;
+
+    margin-top:20px;
+
+}
+
+.sidebar ul li{
+
+    margin:8px 15px;
+
+}
+
+.sidebar ul li a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:14px 18px;
+
+    border-radius:12px;
+
+    transition:.3s;
+
+}
+
+.sidebar ul li a:hover{
+
+    background:#2563eb;
+
+}
+
+.sidebar ul li a.active{
+
+    background:#2563eb;
+
+}
+
+.sidebar i{
+
+    width:22px;
+
+    text-align:center;
+
+}
+
+/* ==========================================
+   Main Area
+========================================== */
+
+.main{
+
+    margin-left:260px;
+
+    min-height:100vh;
+
+}
+
+/* ==========================================
+   Top Navbar
+========================================== */
+
+.topbar{
+
+    height:80px;
+
+    background:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:0 30px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+
+.top-left{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+.menu-btn{
+
+    font-size:24px;
+
+    cursor:pointer;
+
+    color:#2563eb;
+
+}
+
+.search-box{
+
+    position:relative;
+
+}
+
+.search-box input{
+
+    width:300px;
+
+    padding:12px 45px 12px 18px;
+
+    border:1px solid #d1d5db;
+
+    border-radius:30px;
+
+    outline:none;
+
+}
+
+.search-box i{
+
+    position:absolute;
+
+    right:15px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:#64748b;
+
+}
+
+/* Right */
+
+.top-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:25px;
+
+}
+
+.icon-btn{
+
+    position:relative;
+
+    cursor:pointer;
+
+    font-size:22px;
+
+    color:#334155;
+
+}
+
+.badge{
+
+    position:absolute;
+
+    top:-6px;
+
+    right:-8px;
+
+    width:18px;
+
+    height:18px;
+
+    background:red;
+
+    color:white;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:10px;
+
+}
+
+.profile{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    cursor:pointer;
+
+}
+
+.profile img{
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+}
+
+.profile h4{
+
+    font-size:15px;
+
+}
+
+.profile span{
+
+    color:#64748b;
+
+    font-size:13px;
+
+}
+/* ==========================================
+   COMMON CONTENT
+========================================== */
+
+.content{
+    padding:30px;
+}
+
+/* ==========================================
+   COMMON CARD
+========================================== */
+
+.card{
+    background:#ffffff;
+    border-radius:18px;
+    padding:25px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    margin-bottom:25px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card-title{
+    font-size:22px;
+    color:#2563eb;
+    margin-bottom:20px;
+}
+
+/* ==========================================
+   COMMON TABLE
+========================================== */
+
+.table-container{
+    overflow-x:auto;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+table thead{
+    background:#2563eb;
+    color:white;
+}
+
+table th,
+table td{
+    padding:15px;
+    text-align:left;
+}
+
+table tbody tr{
+    border-bottom:1px solid #e5e7eb;
+    transition:.3s;
+}
+
+table tbody tr:hover{
+    background:#f8fafc;
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.btn{
+    padding:12px 20px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.3s;
+    font-weight:600;
+}
+
+.btn-primary{
+    background:#2563eb;
+    color:white;
+}
+
+.btn-success{
+    background:#10b981;
+    color:white;
+}
+
+.btn-danger{
+    background:#ef4444;
+    color:white;
+}
+
+.btn-warning{
+    background:#f59e0b;
+    color:white;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+/* ==========================================
+   PROFILE DROPDOWN
+========================================== */
+
+.profile-dropdown{
+    position:absolute;
+    right:30px;
+    top:85px;
+    width:220px;
+    background:white;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+    display:none;
+    overflow:hidden;
+    z-index:999;
+}
+
+.profile-dropdown.active{
+    display:block;
+}
+
+.profile-dropdown a{
+    display:block;
+    padding:15px 20px;
+    text-decoration:none;
+    color:#334155;
+    transition:.3s;
+}
+
+.profile-dropdown a:hover{
+    background:#2563eb;
+    color:white;
+}
+
+/* ==========================================
+   SCROLL TO TOP
+========================================== */
+
+.scroll-top{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    width:50px;
+    height:50px;
+    background:#2563eb;
+    color:white;
+    border:none;
+    border-radius:50%;
+    cursor:pointer;
+    display:none;
+    box-shadow:0 8px 20px rgba(37,99,235,.3);
+    z-index:999;
+}
+
+.scroll-top.show{
+    display:block;
+}
+
+/* ==========================================
+   DARK MODE
+========================================== */
+
+body.dark{
+    background:#0f172a;
+}
+
+body.dark .topbar,
+body.dark .card,
+body.dark table,
+body.dark .profile-dropdown{
+    background:#1e293b;
+    color:white;
+}
+
+body.dark input{
+    background:#334155;
+    color:white;
+    border:1px solid #475569;
+}
+
+body.dark table tbody tr:hover{
+    background:#334155;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:992px){
+
+    .sidebar{
+        left:-260px;
+    }
+
+    .sidebar.active{
+        left:0;
+    }
+
+    .main{
+        margin-left:0;
+    }
+
+    .search-box input{
+        width:200px;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .topbar{
+        padding:15px;
+    }
+
+    .search-box{
+        display:none;
+    }
+
+    .profile h4,
+    .profile span{
+        display:none;
+    }
+
+}
+
+@media(max-width:576px){
+
+    .content{
+        padding:15px;
+    }
+
+    .top-right{
+        gap:15px;
+    }
+
+}

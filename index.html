@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Digital Library</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                <i class="fa-solid fa-book-open-reader"></i>
+                <span>Smart Library</span>
+            </div>
+
+            <ul class="nav-menu">
+
+                <li><a href="#">Home</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="digital-library.html">Digital Library</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                
+
+                
+
+            </ul>
+
+            <div class="buttons">
+
+                <button onclick="location.href='login.html'">
+                    Login
+                </button>
+
+                <button onclick="location.href='register.html'">
+                    Register
+                </button>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <div class="hero-left">
+
+            <h1>
+                Smart Digital Library Management System
+            </h1>
+
+            <p>
+
+                Search thousands of books, journals,
+                previous year papers and digital resources
+                anytime anywhere.
+
+            </p>
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    placeholder="Search Books...">
+
+                <button>
+                    Search
+                </button>
+
+            </div>
+
+            <div class="hero-buttons">
+
+                <button class="explore">
+                    Explore Books
+                </button>
+
+                <button class="digital">
+                    Digital Library
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="hero-right">
+
+            <img
+                src="https://img.freepik.com/premium-photo/book-library-hd-wallpaper-photographic-image_993236-9141.jpg?w=2000"
+                alt="Library">
+
+        </div>
+
+    </section>
+
+    <!-- Statistics -->
+
+    <section class="stats">
+
+    <div class="card">
+        <h2 id="bookCount">0</h2>
+        <p>Books</p>
+    </div>
+
+    <div class="card">
+        <h2 id="studentCount">0</h2>
+        <p>Students</p>
+    </div>
+
+    <div class="card">
+        <h2 id="authorCount">0</h2>
+        <p>Authors</p>
+    </div>
+
+    <div class="card">
+        <h2 id="ebookCount">0</h2>
+        <p>E-Books</p>
+    </div>
+
+</section>
+<!-- ================= Featured Books ================= -->
+
+<section class="featured-books">
+<section class="featured-books reveal"></section>
+    <div class="section-heading">
+        <h2>Featured Books</h2>
+        <p>Explore our most popular books.</p>
+    </div>
+
+    <div class="books-grid">
+
+        <div class="book-card">
+            <img src="images/books/java.jpg" alt="Java Book">
+
+            <div class="book-info">
+                <h3>Java Programming</h3>
+
+                <p>Author : James Gosling</p>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                </div>
+
+                <button onclick="viewBook('Java Programming')">
+    View Details
+</button>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <img src="images/books/python.jpg" alt="Python Book">
+
+            <div class="book-info">
+                <h3>Python Programming</h3>
+
+                <p>Author : Guido van Rossum</p>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                </div>
+
+                <button onclick="viewBook('Python Programming')">
+    View Details
+</button>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <img src="images/books/dbms.jpg" alt="DBMS Book">
+
+            <div class="book-info">
+                <h3>Database Management</h3>
+
+                <p>Author : Abraham Silberschatz</p>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐☆
+                </div>
+
+                <button onclick="viewBook('Database Management')">
+    View Details
+</button>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <img src="images/books/network.jpg" alt="Networking Book">
+
+            <div class="book-info">
+                <h3>Computer Networks</h3>
+
+                <p>Author : Andrew S. Tanenbaum</p>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                </div>
+
+                <button onclick="viewBook('Computer Networks')">
+    View Details
+</button>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<!-- ================= Book Categories ================= -->
+
+<section class="categories">
+
+    <div class="section-heading">
+        <h2>Book Categories</h2>
+        <p>Browse books by department.</p>
+    </div>
+
+    <div class="category-grid">
+
+        <div class="category-card">
+            <i class="fas fa-laptop-code"></i>
+            <h3>Computer</h3>
+        </div>
+
+        <div class="category-card">
+            <i class="fas fa-database"></i>
+            <h3>Database</h3>
+        </div>
+
+        <div class="category-card">
+            <i class="fas fa-network-wired"></i>
+            <h3>Networking</h3>
+        </div>
+
+        <div class="category-card">
+            <i class="fas fa-robot"></i>
+            <h3>Artificial Intelligence</h3>
+        </div>
+
+        <div class="category-card">
+            <i class="fas fa-cogs"></i>
+            <h3>Mechanical</h3>
+        </div>
+
+        <div class="category-card">
+            <i class="fas fa-building"></i>
+            <h3>Civil</h3>
+        </div>
+
+        <div class="category-card">
+            <i class="fas fa-bolt"></i>
+            <h3>Electrical</h3>
+        </div>
+
+        <div class="category-card">
+            <i class="fas fa-microchip"></i>
+            <h3>Electronics</h3>
+        </div>
+
+    </div>
+
+</section>
+<!-- ================= Latest Books ================= -->
+
+<section class="latest-books">
+
+    <div class="section-heading">
+        <h2>Latest Arrivals</h2>
+        <p>Recently added books in our library.</p>
+    </div>
+
+    <div class="latest-grid">
+
+        <div class="latest-card">
+            <img src="images/books/ai.jpg" alt="">
+            <h3>Artificial Intelligence</h3>
+            <span>2026 Edition</span>
+        </div>
+
+        <div class="latest-card">
+            <img src="images/books/cloud.jpg" alt="">
+            <h3>Cloud Computing</h3>
+            <span>2026 Edition</span>
+        </div>
+
+        <div class="latest-card">
+            <img src="images/books/cyber.jpg" alt="">
+            <h3>Cyber Security</h3>
+            <span>2026 Edition</span>
+        </div>
+
+        <div class="latest-card">
+            <img src="images/books/data.jpg" alt="">
+            <h3>Data Science</h3>
+            <span>2026 Edition</span>
+        </div>
+
+    </div>
+
+</section>
+<!-- ================= Testimonials ================= -->
+
+<section class="testimonials">
+
+    <div class="section-heading">
+        <h2>What Students Say</h2>
+        <p>Feedback from our library users.</p>
+    </div>
+
+    <div class="testimonial-slider">
+
+        <div class="testimonial-card">
+            <img src="images/students/student1.jpg" alt="">
+            <h3>Rahul Sharma</h3>
+            <span>Computer Engineering</span>
+
+            <div class="stars">
+                ⭐⭐⭐⭐⭐
+            </div>
+
+            <p>
+                Excellent digital library with thousands of books.
+                Very easy to search and borrow books.
+            </p>
+
+        </div>
+
+        <div class="testimonial-card">
+
+            <img src="images/students/student2.jpg" alt="">
+
+            <h3>Priya Patel</h3>
+
+            <span>Information Technology</span>
+
+            <div class="stars">
+                ⭐⭐⭐⭐⭐
+            </div>
+
+            <p>
+                Clean interface and very useful for MSBTE students.
+            </p>
+
+        </div>
+
+        <div class="testimonial-card">
+
+            <img src="images/students/student3.jpg" alt="">
+
+            <h3>Aman Verma</h3>
+
+            <span>Electronics Engineering</span>
+
+            <div class="stars">
+                ⭐⭐⭐⭐☆
+            </div>
+
+            <p>
+                Best library management system for our college.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="faq">
+
+    <div class="section-heading">
+        <h2>Frequently Asked Questions</h2>
+    </div>
+
+    <div class="faq-item">
+
+        <button class="faq-question">
+            How can I issue a book?
+        </button>
+
+        <div class="faq-answer">
+            <p>
+                Login to your account and select the required book.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="faq-item">
+
+        <button class="faq-question">
+            What is the return period?
+        </button>
+
+        <div class="faq-answer">
+            <p>
+                Books should be returned within 15 days.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+    <script src="js/script.js"></script>
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- Library Info -->
+        <div class="footer-box">
+            <h2>📚 Smart Library</h2>
+            <p>
+                Smart Digital Library Management System provides students
+                with easy access to books, journals, e-books and previous
+                year question papers.
+            </p>
+
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-x-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-box">
+            <h3>Quick Links</h3>
+
+            <ul>
+                <li><a href="#">🏠 Home</a></li>
+                <li><a href="#">📚 Books</a></li>
+                <li><a href="#">🗂 Categories</a></li>
+                <li><a href="#">💻 Digital Library</a></li>
+                <li><a href="#">📞 Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="footer-box">
+            <h3>Services</h3>
+
+            <ul>
+                <li>📖 Book Issue</li>
+                <li>📕 Book Return</li>
+                <li>📄 E-Books</li>
+                <li>📑 Previous Papers</li>
+                <li>🎓 Student Portal</li>
+            </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-box">
+
+            <h3>Contact Us</h3>
+
+            <p><i class="fas fa-map-marker-alt"></i> Engineering College, Maharashtra</p>
+
+            <p><i class="fas fa-phone"></i> +91 9876543210</p>
+
+            <p><i class="fas fa-envelope"></i> library@example.com</p>
+
+            <p><i class="fas fa-clock"></i> Mon - Sat : 9:00 AM - 6:00 PM</p>
+
+        </div>
+
+    </div>
+
+    <hr>
+
+    <div class="copyright">
+
+        © 2026 Smart Digital Library Management System |
+        Designed by <strong>Mohit Kadav</strong>
+
+    </div>
+
+</footer>
+</body>
+
+</html>

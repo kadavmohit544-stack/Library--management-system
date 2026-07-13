@@ -1,0 +1,439 @@
+/* ==========================================
+   SMART DIGITAL LIBRARY
+   REGISTER PAGE CSS
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    background:linear-gradient(135deg,#2563eb,#1d4ed8,#0f172a);
+}
+
+/* ==========================
+   LOADER
+========================== */
+
+.loader{
+    position:fixed;
+    inset:0;
+    background:#ffffff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:99999;
+}
+
+.loader::after{
+    content:"";
+    width:60px;
+    height:60px;
+    border:6px solid #dbeafe;
+    border-top-color:#2563eb;
+    border-radius:50%;
+    animation:spin .8s linear infinite;
+}
+
+@keyframes spin{
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+/* ==========================
+   PAGE
+========================== */
+
+.register-page{
+
+    width:100%;
+    padding:30px;
+
+}
+
+.register-container{
+
+    width:100%;
+    max-width:1200px;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+
+    margin:auto;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.30);
+
+}
+
+/* ==========================
+   LEFT PANEL
+========================== */
+
+.register-left{
+
+    background:rgba(255,255,255,.08);
+
+    color:#ffffff;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+
+    text-align:center;
+
+    padding:60px;
+
+}
+
+.logo-icon{
+
+    font-size:80px;
+
+    margin-bottom:25px;
+
+}
+
+.register-left h1{
+
+    font-size:40px;
+
+    margin-bottom:20px;
+
+}
+
+.register-left p{
+
+    color:#e2e8f0;
+
+    line-height:1.8;
+
+    font-size:17px;
+
+}
+
+/* ==========================
+   RIGHT PANEL
+========================== */
+
+.register-right{
+
+    background:#ffffff;
+
+    padding:50px;
+
+}
+
+.register-right h2{
+
+    text-align:center;
+
+    color:#2563eb;
+
+    margin-bottom:30px;
+
+    font-size:34px;
+
+}
+
+/* ==========================================
+   INPUT BOX
+========================================== */
+
+.input-box{
+    position:relative;
+    margin-bottom:22px;
+}
+
+.input-box input{
+    width:100%;
+    padding:15px 50px 15px 45px;
+    border:2px solid #e5e7eb;
+    border-radius:10px;
+    outline:none;
+    font-size:16px;
+    transition:.3s;
+}
+
+.input-box input:focus{
+    border-color:#2563eb;
+    box-shadow:0 0 8px rgba(37,99,235,.2);
+}
+
+.input-box i{
+    position:absolute;
+    left:15px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#2563eb;
+    font-size:18px;
+}
+
+/* ==========================================
+   SHOW PASSWORD
+========================================== */
+
+#togglePassword{
+    position:absolute;
+    right:15px;
+    top:50%;
+    transform:translateY(-50%);
+    cursor:pointer;
+    color:#666;
+    transition:.3s;
+}
+
+#togglePassword:hover{
+    color:#2563eb;
+}
+
+/* ==========================================
+   REGISTER BUTTON
+========================================== */
+
+.register-btn{
+    width:100%;
+    padding:15px;
+    background:#2563eb;
+    color:#fff;
+    border:none;
+    border-radius:10px;
+    font-size:17px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.register-btn:hover{
+    background:#1d4ed8;
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(37,99,235,.25);
+}
+
+/* ==========================================
+   LOGIN LINK
+========================================== */
+
+.login-link{
+    margin-top:25px;
+    text-align:center;
+    color:#555;
+    font-size:15px;
+}
+
+.login-link a{
+    text-decoration:none;
+    color:#2563eb;
+    font-weight:600;
+}
+
+.login-link a:hover{
+    text-decoration:underline;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:900px){
+
+    .register-container{
+        grid-template-columns:1fr;
+    }
+
+    .register-left{
+        display:none;
+    }
+
+    .register-right{
+        padding:40px 30px;
+    }
+
+}
+
+@media(max-width:500px){
+
+    .register-page{
+        padding:15px;
+    }
+
+    .register-right{
+        padding:25px 20px;
+    }
+
+    .register-right h2{
+        font-size:28px;
+    }
+
+    .input-box input{
+        font-size:15px;
+    }
+
+}
+/* ==========================================
+   DARK MODE
+========================================== */
+
+body.dark{
+    background:linear-gradient(135deg,#0f172a,#111827,#1f2937);
+}
+
+body.dark .register-right{
+    background:#1f2937;
+}
+
+body.dark .register-right h2{
+    color:#ffffff;
+}
+
+body.dark .input-box input{
+    background:#374151;
+    color:#ffffff;
+    border-color:#4b5563;
+}
+
+body.dark .input-box input::placeholder{
+    color:#d1d5db;
+}
+
+body.dark .login-link{
+    color:#d1d5db;
+}
+
+/* ==========================================
+   TOAST
+========================================== */
+
+.toast{
+    position:fixed;
+    top:20px;
+    right:20px;
+    background:#2563eb;
+    color:#fff;
+    padding:15px 22px;
+    border-radius:10px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+    z-index:9999;
+    animation:toast .4s ease;
+}
+
+@keyframes toast{
+
+    from{
+        opacity:0;
+        transform:translateX(100px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+
+}
+
+/* ==========================================
+   SUCCESS & ERROR
+========================================== */
+
+.success{
+    color:#10b981;
+    font-size:14px;
+    margin-top:5px;
+}
+
+.error{
+    color:#ef4444;
+    font-size:14px;
+    margin-top:5px;
+}
+
+/* ==========================================
+   INPUT HOVER
+========================================== */
+
+.input-box{
+    transition:.3s;
+}
+
+.input-box:hover{
+    transform:translateY(-2px);
+}
+
+/* ==========================================
+   CUSTOM SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-track{
+    background:#e5e7eb;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#2563eb;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#1d4ed8;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:768px){
+
+    .register-right{
+        padding:30px;
+    }
+
+    .register-left h1{
+        font-size:32px;
+    }
+
+    .logo-icon{
+        font-size:60px;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .register-right h2{
+        font-size:26px;
+    }
+
+    .register-btn{
+        padding:14px;
+        font-size:16px;
+    }
+
+}

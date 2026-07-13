@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+}
+
+.container{
+    width:95%;
+    max-width:1400px;
+    margin:40px auto;
+}
+
+/* Header */
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+header h1{
+    color:#2563eb;
+    font-size:32px;
+}
+
+header button{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:12px 22px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+header button:hover{
+    background:#1d4ed8;
+}
+
+/* Toolbar */
+
+.toolbar{
+    display:flex;
+    gap:20px;
+    margin-bottom:25px;
+    flex-wrap:wrap;
+}
+
+.toolbar input,
+.toolbar select{
+    flex:1;
+    min-width:220px;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+/* Table */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+thead{
+    background:#2563eb;
+    color:white;
+}
+
+th,td{
+    padding:15px;
+    text-align:center;
+}
+
+tbody tr:nth-child(even){
+    background:#f8fafc;
+}
+
+tbody tr:hover{
+    background:#eef4ff;
+}
+
+td img{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+/* Status */
+
+.active{
+    background:#10b981;
+    color:white;
+    padding:5px 12px;
+    border-radius:20px;
+    font-size:13px;
+}
+
+.inactive{
+    background:#ef4444;
+    color:white;
+    padding:5px 12px;
+    border-radius:20px;
+    font-size:13px;
+}
+
+/* Action Buttons */
+
+.action-btn{
+    border:none;
+    color:white;
+    padding:8px 12px;
+    margin:0 4px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+.edit-btn{
+    background:#f59e0b;
+}
+
+.delete-btn{
+    background:#ef4444;
+}
+
+/* Modal */
+
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.55);
+    justify-content:center;
+    align-items:center;
+    z-index:1000;
+}
+
+.modal-content{
+    width:90%;
+    max-width:500px;
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    position:relative;
+}
+
+.close{
+    position:absolute;
+    right:18px;
+    top:15px;
+    font-size:28px;
+    cursor:pointer;
+}
+
+.modal-content h2{
+    margin-bottom:20px;
+    color:#2563eb;
+}
+
+.modal-content form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.modal-content input,
+.modal-content select{
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+.modal-content button{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:12px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.modal-content button:hover{
+    background:#1d4ed8;
+}
+
+/* Toast */
+
+.toast{
+    position:fixed;
+    top:30px;
+    right:30px;
+    background:#10b981;
+    color:white;
+    padding:15px 25px;
+    border-radius:10px;
+    transform:translateX(300px);
+    transition:.4s;
+    z-index:9999;
+}
+
+.toast.show{
+    transform:translateX(0);
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+header{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:15px;
+}
+
+.toolbar{
+    flex-direction:column;
+}
+
+table{
+    display:block;
+    overflow-x:auto;
+}
+
+}

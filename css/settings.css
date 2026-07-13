@@ -1,0 +1,412 @@
+/* ==========================================
+   Google Font
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ==========================================
+   Reset
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+    color:#1e293b;
+}
+
+.container{
+    width:95%;
+    max-width:1300px;
+    margin:40px auto;
+}
+
+/* ==========================================
+   Header
+========================================== */
+
+.settings-header{
+    background:#2563eb;
+    color:white;
+    padding:30px;
+    border-radius:20px;
+    margin-bottom:30px;
+    box-shadow:0 15px 35px rgba(37,99,235,.25);
+}
+
+.settings-header h1{
+    font-size:34px;
+    margin-bottom:10px;
+}
+
+.settings-header p{
+    opacity:.9;
+}
+
+/* ==========================================
+   Profile Card
+========================================== */
+
+.profile-card{
+    display:flex;
+    align-items:center;
+    gap:25px;
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    margin-bottom:30px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.profile-image img{
+    width:110px;
+    height:110px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid #2563eb;
+}
+
+.profile-info h2{
+    font-size:28px;
+    margin-bottom:8px;
+}
+
+.profile-info p{
+    color:#64748b;
+}
+
+/* ==========================================
+   Setting Box
+========================================== */
+
+.setting-box{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    margin-bottom:30px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.setting-box h2{
+    color:#2563eb;
+    margin-bottom:25px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+/* ==========================================
+   Form Grid
+========================================== */
+
+.form-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.form-grid label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:600;
+}
+
+.form-grid input{
+    width:100%;
+    padding:14px;
+    border:1px solid #d1d5db;
+    border-radius:10px;
+    outline:none;
+    transition:.3s;
+}
+
+.form-grid input:focus{
+    border-color:#2563eb;
+    box-shadow:0 0 0 3px rgba(37,99,235,.15);
+}
+
+/* ==========================================
+   Setting Options
+========================================== */
+
+.setting-option{
+    margin-bottom:20px;
+}
+
+.setting-option label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:600;
+}
+
+.setting-option input{
+    width:100%;
+    padding:14px;
+    border:1px solid #d1d5db;
+    border-radius:10px;
+}
+
+/* ==========================================
+   Theme Buttons
+========================================== */
+
+.theme-buttons{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.theme-buttons button{
+    padding:14px 25px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:600;
+    transition:.3s;
+}
+
+#lightMode{
+    background:#facc15;
+    color:#111827;
+}
+
+#darkMode{
+    background:#1e293b;
+    color:white;
+}
+
+#backupBtn{
+    background:#10b981;
+    color:white;
+}
+
+#restoreBtn{
+    background:#2563eb;
+    color:white;
+}
+
+.theme-buttons button:hover{
+    transform:translateY(-3px);
+}
+/* ==========================================
+   ACTION BUTTONS
+========================================== */
+
+.action-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin:40px 0;
+    flex-wrap:wrap;
+}
+
+.action-buttons button{
+    min-width:220px;
+    padding:16px 30px;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:600;
+    transition:all .3s ease;
+}
+
+#saveSettings{
+    background:#2563eb;
+    color:#fff;
+}
+
+#saveSettings:hover{
+    background:#1d4ed8;
+    transform:translateY(-5px);
+    box-shadow:0 12px 25px rgba(37,99,235,.25);
+}
+
+#resetSettings{
+    background:#ef4444;
+    color:#fff;
+}
+
+#resetSettings:hover{
+    background:#dc2626;
+    transform:translateY(-5px);
+    box-shadow:0 12px 25px rgba(239,68,68,.25);
+}
+
+/* ==========================================
+   CHECKBOX STYLE
+========================================== */
+
+.setting-box input[type="checkbox"]{
+    width:18px;
+    height:18px;
+    accent-color:#2563eb;
+    margin-right:10px;
+    cursor:pointer;
+}
+
+.setting-box label{
+    font-size:15px;
+}
+
+/* ==========================================
+   INPUT HOVER
+========================================== */
+
+input:hover{
+    border-color:#2563eb;
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.footer{
+    background:#1e293b;
+    color:#fff;
+    text-align:center;
+    padding:25px;
+    border-radius:18px;
+    margin-top:40px;
+}
+
+.footer p{
+    margin:6px 0;
+    color:#cbd5e1;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:992px){
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .profile-card{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .theme-buttons{
+        flex-direction:column;
+    }
+
+    .theme-buttons button{
+        width:100%;
+    }
+
+    .action-buttons{
+        flex-direction:column;
+    }
+
+    .action-buttons button{
+        width:100%;
+    }
+
+}
+
+@media(max-width:576px){
+
+    .container{
+        width:96%;
+        margin:20px auto;
+    }
+
+    .settings-header{
+        padding:20px;
+        text-align:center;
+    }
+
+    .setting-box{
+        padding:20px;
+    }
+
+}
+
+/* ==========================================
+   DARK MODE
+========================================== */
+
+body.dark{
+    background:#0f172a;
+}
+
+body.dark .profile-card,
+body.dark .setting-box{
+    background:#1e293b;
+    color:white;
+}
+
+body.dark .form-grid input,
+body.dark .setting-option input{
+    background:#334155;
+    color:white;
+    border:1px solid #475569;
+}
+
+body.dark .footer{
+    background:#020617;
+}
+
+body.dark .profile-info p,
+body.dark .setting-box label{
+    color:#cbd5e1;
+}
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#e5e7eb;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#2563eb;
+    border-radius:10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#1d4ed8;
+}
+
+/* ==========================================
+   ANIMATION
+========================================== */
+
+.setting-box,
+.profile-card,
+.settings-header{
+    animation:fadeUp .6s ease;
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}

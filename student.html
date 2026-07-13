@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Students Management</title>
+
+<link rel="stylesheet" href="css/student.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+
+<h1>
+<i class="fas fa-user-graduate"></i>
+Students Management
+</h1>
+
+<button id="addStudentBtn">
+<i class="fas fa-plus"></i>
+Add Student
+</button>
+
+</header>
+
+<div class="toolbar">
+
+<input
+type="text"
+id="searchStudent"
+placeholder="Search Student...">
+
+<select id="departmentFilter">
+
+<option value="All">All Departments</option>
+<option>Computer</option>
+<option>Mechanical</option>
+<option>Civil</option>
+<option>Electrical</option>
+<option>Electronics</option>
+
+</select>
+
+</div>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+<th>Photo</th>
+<th>Name</th>
+<th>Roll No</th>
+<th>Department</th>
+<th>Year</th>
+<th>Mobile</th>
+<th>Status</th>
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody id="studentTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+<!-- Modal -->
+
+<div class="modal" id="studentModal">
+
+<div class="modal-content">
+
+<span class="close">&times;</span>
+
+<h2 id="modalTitle">
+
+Add Student
+
+</h2>
+
+<form id="studentForm">
+
+<input type="hidden" id="studentId">
+
+<input
+type="text"
+id="studentName"
+placeholder="Student Name"
+required>
+
+<input
+type="text"
+id="rollNo"
+placeholder="Roll Number"
+required>
+
+<select id="department">
+
+<option>Computer</option>
+<option>Mechanical</option>
+<option>Civil</option>
+<option>Electrical</option>
+<option>Electronics</option>
+
+</select>
+
+<select id="year">
+
+<option>First Year</option>
+<option>Second Year</option>
+<option>Third Year</option>
+
+</select>
+
+<input
+type="text"
+id="mobile"
+placeholder="Mobile Number">
+
+<input
+type="url"
+id="photo"
+placeholder="Photo URL">
+
+<button>
+
+Save Student
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+<script src="js/student.js"></script>
+
+</body>
+
+</html>

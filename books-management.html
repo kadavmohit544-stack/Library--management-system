@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books Management</title>
+
+    <link rel="stylesheet" href="css/books-management.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+
+    <header>
+
+        <h1>
+            <i class="fas fa-book"></i>
+            Books Management
+        </h1>
+
+        <button id="addBookBtn">
+            <i class="fas fa-plus"></i>
+            Add Book
+        </button>
+
+    </header>
+
+    <!-- Search -->
+
+    <section class="toolbar">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search Book...">
+<div class="top-actions">
+
+    <button id="exportBtn">
+        <i class="fas fa-file-export"></i>
+        Export JSON
+    </button>
+
+    <button id="importBtn">
+        <i class="fas fa-file-import"></i>
+        Import JSON
+    </button>
+
+    <button id="printBtn">
+        <i class="fas fa-print"></i>
+        Print
+    </button>
+
+    <input
+        type="file"
+        id="importFile"
+        accept=".json"
+        hidden>
+
+</div>
+        <select id="categoryFilter">
+
+            <option value="All">All Categories</option>
+            <option value="Programming">Programming</option>
+            <option value="Database">Database</option>
+            <option value="Networking">Networking</option>
+            <option value="AI">AI</option>
+
+        </select>
+
+    </section>
+
+    <!-- Table -->
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>ID</th>
+                <th>Cover</th>
+                <th>Book</th>
+                <th>Author</th>
+                <th>Category</th>
+                <th>Copies</th>
+                <th>Status</th>
+                <th>Action</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody id="bookTable">
+
+        </tbody>
+
+    </table>
+
+</div>
+
+<!-- Modal -->
+
+<div class="modal" id="bookModal">
+
+    <div class="modal-content">
+
+        <span class="close">&times;</span>
+
+        <h2 id="modalTitle">
+            Add Book
+        </h2>
+
+        <form id="bookForm">
+
+            <input type="hidden" id="bookId">
+
+            <input
+                type="text"
+                id="bookName"
+                placeholder="Book Name"
+                required>
+
+            <input
+                type="text"
+                id="author"
+                placeholder="Author"
+                required>
+
+            <select id="category">
+
+                <option>Programming</option>
+                <option>Database</option>
+                <option>Networking</option>
+                <option>AI</option>
+
+            </select>
+
+            <input
+                type="number"
+                id="copies"
+                placeholder="Copies"
+                required>
+
+            <input
+                type="url"
+                id="image"
+                placeholder="Image URL">
+
+            <button type="submit">
+
+                Save Book
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script src="js/books-management.js"></script>
+
+</body>
+</html>

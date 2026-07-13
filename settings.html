@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Settings | Smart Library</title>
+
+    <link rel="stylesheet" href="css/settings.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+
+    <header class="settings-header">
+
+        <h1>
+
+            <i class="fas fa-cog"></i>
+
+            Library Settings
+
+        </h1>
+
+        <p>
+
+            Manage your Smart Library configuration
+
+        </p>
+
+    </header>
+
+    <!-- Profile Card -->
+
+    <section class="profile-card">
+
+        <div class="profile-image">
+
+            <img src="images/admin.png" alt="Admin">
+
+        </div>
+
+        <div class="profile-info">
+
+            <h2>Mohit Kadav</h2>
+
+            <p>Library Administrator</p>
+
+        </div>
+
+    </section>
+
+    <!-- Library Information -->
+
+    <section class="setting-box">
+
+        <h2>
+
+            <i class="fas fa-building"></i>
+
+            Library Information
+
+        </h2>
+
+        <div class="form-grid">
+
+            <div>
+
+                <label>Library Name</label>
+
+                <input
+                    type="text"
+                    id="libraryName"
+                    placeholder="Smart Digital Library">
+
+            </div>
+
+            <div>
+
+                <label>College Name</label>
+
+                <input
+                    type="text"
+                    id="collegeName"
+                    placeholder="Engineering College">
+
+            </div>
+
+            <div>
+
+                <label>Email</label>
+
+                <input
+                    type="email"
+                    id="libraryEmail"
+                    placeholder="library@example.com">
+
+            </div>
+
+            <div>
+
+                <label>Phone</label>
+
+                <input
+                    type="text"
+                    id="libraryPhone"
+                    placeholder="+91 9876543210">
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Theme -->
+
+    <section class="setting-box">
+
+        <h2>
+
+            <i class="fas fa-palette"></i>
+
+            Theme Settings
+
+        </h2>
+
+        <div class="theme-buttons">
+
+            <button id="lightMode">
+
+                ☀ Light
+
+            </button>
+
+            <button id="darkMode">
+
+                🌙 Dark
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- Notification -->
+
+    <section class="setting-box">
+
+        <h2>
+
+            <i class="fas fa-bell"></i>
+
+            Notification Settings
+
+        </h2>
+
+        <label>
+
+            <input type="checkbox" id="emailNotification">
+
+            Enable Email Notification
+
+        </label>
+
+        <br><br>
+
+        <label>
+
+            <input type="checkbox" id="systemNotification">
+
+            Enable System Notification
+
+        </label>
+
+    </section>
+        <!-- ================= CHANGE PASSWORD ================= -->
+
+    <section class="setting-box">
+
+        <h2>
+            <i class="fas fa-lock"></i>
+            Change Password
+        </h2>
+
+        <div class="form-grid">
+
+            <div>
+
+                <label>Current Password</label>
+
+                <input
+                    type="password"
+                    id="currentPassword"
+                    placeholder="Current Password">
+
+            </div>
+
+            <div>
+
+                <label>New Password</label>
+
+                <input
+                    type="password"
+                    id="newPassword"
+                    placeholder="New Password">
+
+            </div>
+
+            <div>
+
+                <label>Confirm Password</label>
+
+                <input
+                    type="password"
+                    id="confirmPassword"
+                    placeholder="Confirm Password">
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= SYSTEM SETTINGS ================= -->
+
+    <section class="setting-box">
+
+        <h2>
+            <i class="fas fa-sliders-h"></i>
+            System Settings
+        </h2>
+
+        <div class="setting-option">
+
+            <label>Maximum Books Per Student</label>
+
+            <input
+                type="number"
+                id="maxBooks"
+                value="5">
+
+        </div>
+
+        <div class="setting-option">
+
+            <label>Fine Per Day (₹)</label>
+
+            <input
+                type="number"
+                id="finePerDay"
+                value="10">
+
+        </div>
+
+        <div class="setting-option">
+
+            <label>Book Return Days</label>
+
+            <input
+                type="number"
+                id="returnDays"
+                value="15">
+
+        </div>
+
+    </section>
+
+    <!-- ================= BACKUP ================= -->
+
+    <section class="setting-box">
+
+        <h2>
+            <i class="fas fa-database"></i>
+            Backup & Restore
+        </h2>
+
+        <div class="theme-buttons">
+
+            <button id="backupBtn">
+                <i class="fas fa-download"></i>
+                Backup Data
+            </button>
+
+            <button id="restoreBtn">
+                <i class="fas fa-upload"></i>
+                Restore Data
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- ================= ACTION BUTTONS ================= -->
+
+    <section class="action-buttons">
+
+        <button id="saveSettings">
+
+            <i class="fas fa-save"></i>
+
+            Save Settings
+
+        </button>
+
+        <button id="resetSettings">
+
+            <i class="fas fa-rotate-left"></i>
+
+            Reset Settings
+
+        </button>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <p>
+
+            © 2026 Smart Digital Library Management System
+
+        </p>
+
+        <p>
+
+            Developed by <strong>Mohit Kadav</strong>
+
+        </p>
+
+    </footer>
+
+</div>
+
+<script src="js/settings.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard</title>
+
+<link rel="stylesheet" href="css/admin.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+<body>
+
+<div class="sidebar">
+
+    <div class="logo">
+        📚 Smart Library
+    </div>
+
+    <ul>
+
+        <li class="active">
+            <i class="fa-solid fa-chart-line"></i>
+            Dashboard
+        </li>
+
+        <li>
+            <i class="fa-solid fa-book"></i>
+            Books
+        </li>
+
+        <li>
+            <i class="fa-solid fa-user-graduate"></i>
+            Students
+        </li>
+
+        <li>
+            <i class="fa-solid fa-book-open-reader"></i>
+            Issue Books
+        </li>
+
+        <li>
+            <i class="fa-solid fa-rotate-left"></i>
+            Return Books
+        </li>
+
+        <li>
+            <i class="fa-solid fa-gear"></i>
+            Settings
+        </li>
+
+        <li>
+            <i class="fa-solid fa-right-from-bracket"></i>
+            Logout
+        </li>
+
+    </ul>
+
+</div>
+
+<div class="main">
+
+<h1>Admin Dashboard</h1>
+
+<div class="cards">
+
+<div class="card">
+<h2>15,000</h2>
+<p>Total Books</p>
+</div>
+
+<div class="card">
+<h2>5,000</h2>
+<p>Students</p>
+</div>
+
+<div class="card">
+<h2>350</h2>
+<p>Issued</p>
+</div>
+
+<div class="card">
+<h2>280</h2>
+<p>Returned</p>
+</div>
+
+</div>
+
+<h2 class="title">Recent Books</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+<th>Book Name</th>
+<th>Author</th>
+<th>Status</th>
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody id="bookTable">
+
+<tr>
+
+<td>1</td>
+<td>Java Programming</td>
+<td>Herbert Schildt</td>
+<td>Available</td>
+
+<td>
+
+<button class="edit">Edit</button>
+
+<button class="delete">Delete</button>
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<script src="js/admin.js"></script>
+
+</body>
+</html>

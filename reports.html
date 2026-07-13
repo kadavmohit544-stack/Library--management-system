@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Reports | Smart Library</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/reports.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Chart JS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <div>
+
+        <h1>
+
+            <i class="fas fa-chart-line"></i>
+
+            Library Reports
+
+        </h1>
+
+        <p>
+
+            Smart Digital Library Analytics Dashboard
+
+        </p>
+
+    </div>
+
+    <div class="header-buttons">
+
+        <button id="printBtn">
+
+            <i class="fas fa-print"></i>
+
+            Print
+
+        </button>
+
+        <button id="exportBtn">
+
+            <i class="fas fa-file-csv"></i>
+
+            Export CSV
+
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- ================= SUMMARY ================= -->
+
+<section class="summary">
+
+<div class="card">
+
+<i class="fas fa-book"></i>
+
+<div>
+
+<h2 id="totalBooks">0</h2>
+
+<p>Total Books</p>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<i class="fas fa-user-graduate"></i>
+
+<div>
+
+<h2 id="totalStudents">0</h2>
+
+<p>Total Students</p>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<i class="fas fa-book-open"></i>
+
+<div>
+
+<h2 id="issuedBooks">0</h2>
+
+<p>Issued Books</p>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<i class="fas fa-undo"></i>
+
+<div>
+
+<h2 id="returnedBooks">0</h2>
+
+<p>Returned Books</p>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<i class="fas fa-rupee-sign"></i>
+
+<div>
+
+<h2 id="totalFine">₹0</h2>
+
+<p>Fine Collected</p>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<i class="fas fa-layer-group"></i>
+
+<div>
+
+<h2 id="availableBooks">0</h2>
+
+<p>Available Books</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= SEARCH ================= -->
+
+<section class="filters">
+
+<input
+
+type="text"
+
+id="searchReport"
+
+placeholder="Search Student or Book...">
+
+<input
+
+type="date"
+
+id="fromDate">
+
+<input
+
+type="date"
+
+id="toDate">
+
+<button id="filterBtn">
+
+<i class="fas fa-filter"></i>
+
+Filter
+
+</button>
+
+</section>
+
+
+<!-- ================= CHARTS ================= -->
+
+<section class="charts">
+
+<div class="chart-box">
+
+<h2>
+
+Monthly Issue Statistics
+
+</h2>
+
+<canvas id="issueChart"></canvas>
+
+</div>
+
+
+<div class="chart-box">
+
+<h2>
+
+Book Categories
+
+</h2>
+
+<canvas id="categoryChart"></canvas>
+
+</div>
+
+</section>
+<!-- ================= ISSUE REPORT ================= -->
+
+<section class="report-table">
+
+    <div class="table-header">
+
+        <h2>
+
+            <i class="fas fa-book-open"></i>
+
+            Latest Issued Books
+
+        </h2>
+
+    </div>
+
+    <div class="table-responsive">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>ID</th>
+                    <th>Student</th>
+                    <th>Book</th>
+                    <th>Issue Date</th>
+                    <th>Due Date</th>
+                    <th>Status</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="issueTable">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+
+<!-- ================= RETURN REPORT ================= -->
+
+<section class="report-table">
+
+    <div class="table-header">
+
+        <h2>
+
+            <i class="fas fa-undo"></i>
+
+            Latest Returned Books
+
+        </h2>
+
+    </div>
+
+    <div class="table-responsive">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>ID</th>
+                    <th>Student</th>
+                    <th>Book</th>
+                    <th>Return Date</th>
+                    <th>Fine</th>
+                    <th>Status</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="returnTable">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+
+<!-- ================= TOP BOOKS ================= -->
+
+<section class="top-section">
+
+    <div class="top-card">
+
+        <h2>
+
+            <i class="fas fa-star"></i>
+
+            Top Issued Books
+
+        </h2>
+
+        <ul id="topBooks">
+
+        </ul>
+
+    </div>
+
+    <div class="top-card">
+
+        <h2>
+
+            <i class="fas fa-user-graduate"></i>
+
+            Top Students
+
+        </h2>
+
+        <ul id="topStudents">
+
+        </ul>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FINE REPORT ================= -->
+
+<section class="fine-report">
+
+    <h2>
+
+        Fine Collection Report
+
+    </h2>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Student</th>
+                <th>Book</th>
+                <th>Fine</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody id="fineTable">
+
+        </tbody>
+
+    </table>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <p>
+
+        © 2026 Smart Digital Library Management System
+
+    </p>
+
+    <p>
+
+        Developed By <strong>Mohit Kadav</strong>
+
+    </p>
+
+</footer>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script src="js/reports.js"></script>
+
+</body>
+
+</html>
