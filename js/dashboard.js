@@ -1,221 +1,206 @@
 
-// =======================================
-// Smart Library Dashboard
-// dashboard.js
-// =======================================
-
-// LocalStorage Data
-let books = JSON.parse(localStorage.getItem("books")) || [];
-let students = JSON.parse(localStorage.getItem("students")) || [];
-let issues = JSON.parse(localStorage.getItem("issues")) || [];
-let returns = JSON.parse(localStorage.getItem("returns")) || [];
-
-// Dashboard Elements
-const totalBooks = document.getElementById("totalBooks");
-const totalStudents = document.getElementById("totalStudents");
-const totalIssued = document.getElementById("totalIssued");
-const totalReturned = document.getElementById("totalReturned");
-
-const latestIssueTable = document.getElementById("latestIssueTable");
-
+// ===============================
+// Sidebar Toggle
+// ===============================
 const menuBtn = document.getElementById("menuBtn");
 const sidebar = document.getElementById("sidebar");
 
+if (menuBtn) {
+    menuBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("active");
+    });
+}
+
+// ===============================
+// Dark Mode
+// ===============================
 const themeBtn = document.getElementById("themeBtn");
 
-// =======================================
-// Load Dashboard Cards
-// =======================================
+if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark");
+    if (themeBtn) {
+        themeBtn.innerHTML = '<i class="fas fa-sun"></i>';
+    }
+}
 
-function loadDashboard() {
+if (themeBtn) {
+    themeBtn.addEventListener("click", () => {
 
-    totalBooks.textContent = books.length;
+        document.body.classList.toggle("dark");
 
-    totalStudents.textContent = students.length;
+        if (document.body.classList.contains("dark")) {
 
-    totalIssued.textContent = issues.length;
+            localStorage.setItem("theme", "dark");
+            themeBtn.innerHTML = '<i class="fas fa-sun"></i>';
 
-    totalReturned.textContent = returns.length;
+        } else {
+
+            localStorage.setItem("theme", "light");
+            themeBtn.innerHTML = '<i class="fas fa-moon"></i>';
+
+        }
+
+    });
+}
+
+// ===============================
+// Counter Animation
+// ===============================
+function counter(id, end, speed = 30) {
+
+    let count = 0;
+    const element = document.getElementById(id);
+
+    const interval = setInterval(() => {
+
+        count++;
+
+        element.innerText = count;
+
+        if (count >= end) {
+            clearInterval(interval);
+        }
+
+    }, speed);
 
 }
 
-loadDashboard();
+counter("totalBooks", 560);
+counter("totalStudents", 245);
+counter("totalIssued", 120);
+counter("totalReturned", 98);
 
+// ===============================
+// Latest Issued Books
+// ===============================
+const latestBooks = [
 
-// =======================================
-// Load Latest Issued Books
-// =======================================
+    {
+        student: "Rahul Sharma",
+        book: "Java Programming",
+        date: "13 Jul 2026",
+        status: "Issued"
+    },
 
-function loadLatestIssues() {
+    {
+        student: "Priya Patel",
+        book: "Python Basics",
+        date: "13 Jul 2026",
+        status: "Issued"
+    },
 
-    if (!latestIssueTable) return;
+    {
+        student: "Mohit Kadav",
+        book: "Database Management",
+        date: "12 Jul 2026",
+        status: "Issued"
+    },
 
-    latestIssueTable.innerHTML = "";
-
-    if (issues.length === 0) {
-
-        latestIssueTable.innerHTML = `
-
-        <tr>
-
-            <td colspan="4">
-
-                No Issued Books Found
-
-            </td>
-
-        </tr>
-
-        `;
-
-        return;
-
+    {
+        student: "Amit Verma",
+        book: "Computer Network",
+        date: "12 Jul 2026",
+        status: "Issued"
     }
 
-    issues.slice().reverse().forEach(item => {
+];
 
-        latestIssueTable.innerHTML += `
+const table = document.getElementById("latestIssueTable");
 
+if (table) {
+
+    latestBooks.forEach(book => {
+
+        table.innerHTML += `
         <tr>
-
-            <td>${item.student}</td>
-
-            <td>${item.book}</td>
-
-            <td>${item.issueDate}</td>
-
+            <td>${book.student}</td>
+            <td>${book.book}</td>
+            <td>${book.date}</td>
             <td>
-
-                <span class="badge-warning">
-
-                    Issued
-
-                </span>
-
+                <span class="status issued">${book.status}</span>
             </td>
-
         </tr>
-
         `;
 
     });
 
 }
 
-loadLatestIssues();
+// ===============================
+// Search Filter
+// ===============================
+const search = document.querySelector(".search input");
 
+if (search) {
 
-// =======================================
-// Mobile Sidebar
-// =======================================
+    search.addEventListener("keyup", function () {
 
-if(menuBtn){
+        const value = this.value.toLowerCase();
 
-menuBtn.onclick=function(){
+        const rows = document.querySelectorAll("#latestIssueTable tr");
 
-sidebar.classList.toggle("active");
+        rows.forEach(row => {
 
-};
+            row.style.display =
+                row.innerText.toLowerCase().includes(value)
+                    ? ""
+                    : "none";
 
-}
+        });
 
-
-// =======================================
-// Dark Mode
-// =======================================
-
-let darkMode = localStorage.getItem("darkMode");
-
-if(darkMode==="enabled"){
-
-document.body.classList.add("dark");
+    });
 
 }
 
-if(themeBtn){
-
-themeBtn.onclick=function(){
-
-document.body.classList.toggle("dark");
-
-if(document.body.classList.contains("dark")){
-
-localStorage.setItem("darkMode","enabled");
-
-}else{
-
-localStorage.setItem("darkMode","disabled");
-
-}
-
-};
-
-}
-
-
-// =======================================
-// Auto Refresh Every Second
-// =======================================
-
-setInterval(()=>{
-
-books = JSON.parse(localStorage.getItem("books")) || [];
-
-students = JSON.parse(localStorage.getItem("students")) || [];
-
-issues = JSON.parse(localStorage.getItem("issues")) || [];
-
-returns = JSON.parse(localStorage.getItem("returns")) || [];
-
-loadDashboard();
-
-},1000);
-
-
-// =======================================
-// Greeting
-// =======================================
+// ===============================
+// Greeting Message
+// ===============================
+const title = document.querySelector(".page-title h1");
 
 const hour = new Date().getHours();
 
-let greeting = "";
+if (title) {
 
-if(hour < 12){
+    if (hour < 12) {
 
-greeting = "Good Morning ☀️";
+        title.innerHTML = "🌞 Good Morning, Admin";
+
+    } else if (hour < 17) {
+
+        title.innerHTML = "☀ Good Afternoon, Admin";
+
+    } else {
+
+        title.innerHTML = "🌙 Good Evening, Admin";
+
+    }
 
 }
-else if(hour < 17){
 
-greeting = "Good Afternoon 🌤";
+// ===============================
+// Live Clock
+// ===============================
+const clock = document.createElement("div");
+
+clock.id = "liveClock";
+
+clock.style.fontWeight = "600";
+clock.style.marginRight = "15px";
+
+const topIcons = document.querySelector(".top-icons");
+
+if (topIcons) {
+    topIcons.prepend(clock);
+}
+
+function updateClock() {
+
+    const now = new Date();
+
+    clock.innerHTML = now.toLocaleString();
 
 }
-else{
 
-greeting = "Good Evening 🌙";
+updateClock();
 
-}
-
-console.log(greeting);
-
-
-// =======================================
-// Current Date
-// =======================================
-
-console.log(
-
-new Date().toLocaleDateString()
-
-);
-
-
-// =======================================
-// Dashboard Ready
-// =======================================
-
-console.log(
-
-"Smart Library Dashboard Loaded Successfully"
-
-);
+setInterval(updateClock, 1000);

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Management | Smart Library</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/donation.css">
+</head>
+
+<body>
+
+    
+    <!-- Main Content -->
+    <div class="main">
+
+        <div class="topbar">
+
+            <h1>Donation Management</h1>
+
+            <button class="printBtn">
+                <i class="fa-solid fa-print"></i>
+                Print Report
+            </button>
+
+        </div>
+
+        <!-- Cards -->
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Total Donations</h3>
+                <h2>₹ <span id="totalDonation">0</span></h2>
+            </div>
+
+            <div class="card">
+                <h3>Today's Donation</h3>
+                <h2>₹ <span id="todayDonation">0</span></h2>
+            </div>
+
+            <div class="card">
+                <h3>Total Donors</h3>
+                <h2 id="totalDonors">0</h2>
+            </div>
+
+        </div>
+
+        <!-- Donation Form -->
+
+        <div class="form-container">
+
+            <h2>Add New Donation</h2>
+
+            <form id="donationForm">
+
+                <div class="grid">
+
+                    <input type="text" id="name"
+                        placeholder="Donor Name" required>
+
+                    <input type="text" id="mobile"
+                        placeholder="Mobile Number" required>
+
+                    <input type="email" id="email"
+                        placeholder="Email">
+
+                    <input type="number" id="amount"
+                        placeholder="Donation Amount" required>
+
+                    <select id="payment">
+
+                        <option>Cash</option>
+                        <option>UPI</option>
+                        <option>Bank Transfer</option>
+
+                    </select>
+
+                    <input type="text"
+                        id="transaction"
+                        placeholder="Transaction ID">
+
+                    <input type="date"
+                        id="date">
+
+                    <input type="text"
+                        id="purpose"
+                        placeholder="Purpose">
+
+                </div>
+
+                <textarea
+                    id="remark"
+                    rows="4"
+                    placeholder="Remarks"></textarea>
+
+                <button type="submit"
+                    class="saveBtn">
+
+                    <i class="fa-solid fa-floppy-disk"></i>
+                    Save Donation
+
+                </button>
+
+            </form>
+
+        </div>
+
+        <!-- Donation Table -->
+
+        <div class="table-container">
+
+            <h2>Donation Records</h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Receipt No</th>
+
+                        <th>Name</th>
+
+                        <th>Amount</th>
+
+                        <th>Payment</th>
+
+                        <th>Date</th>
+
+                        <th>Receipt</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="donationTable">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <script src="js/donation.js"></script>
+
+</body>
+
+</html>

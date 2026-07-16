@@ -3,430 +3,604 @@
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Dashboard | Smart Library</title>
+<title>Dashboard | Smart Library</title>
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Dashboard CSS -->
-    <link rel="stylesheet" href="css/dashboard.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+<link rel="stylesheet" href="css/dashboard.css">
+
 
 </head>
 
+
 <body>
 
-<!-- ================= SIDEBAR ================= -->
+
+<!-- SIDEBAR -->
 
 <div class="sidebar" id="sidebar">
 
-    <div class="logo">
 
-        <i class="fas fa-book-reader"></i>
+<div class="logo">
 
-        <span>Smart Library</span>
+<i class="fas fa-book-reader"></i>
 
-    </div>
-
-    <ul>
-
-        <li class="active">
-            <a href="dashboard.html">
-                <i class="fas fa-home"></i>
-                Dashboard
-            </a>
-        </li>
-
-        <li>
-            <a href="books.html">
-                <i class="fas fa-book"></i>
-                Books
-            </a>
-        </li>
-
-        <li>
-            <a href="student.html">
-                <i class="fas fa-user-graduate"></i>
-                Students
-            </a>
-        </li>
-
-        <li>
-            <a href="issue-book.html">
-                <i class="fas fa-book-open"></i>
-                Issue Book
-            </a>
-        </li>
-
-        <li>
-            <a href="return-book.html">
-                <i class="fas fa-undo"></i>
-                Return Book
-            </a>
-        </li>
-
-        <li>
-            <a href="reports.html">
-                <i class="fas fa-chart-line"></i>
-                Reports
-            </a>
-        </li>
-
-        <li>
-            <a href="settings.html">
-                <i class="fas fa-cog"></i>
-                Settings
-            </a>
-        </li>
-
-        <li>
-            <a href="index.html">
-                <i class="fas fa-sign-out-alt"></i>
-                Logout
-            </a>
-        </li>
-
-    </ul>
+<span>Smart Library</span>
 
 </div>
 
-<!-- ================= MAIN ================= -->
+
+<ul>
+
+
+<li class="active">
+
+<a href="dashboard.html">
+<i class="fas fa-home"></i>
+Dashboard
+</a>
+
+</li>
+
+
+<li>
+
+<a href="add-book.html">
+<i class="fas fa-book"></i>
+Books
+</a>
+
+</li>
+
+
+<li>
+
+<a href="student.html">
+<i class="fas fa-user-graduate"></i>
+Students
+</a>
+
+</li>
+
+
+<li>
+
+<a href="issue-book.html">
+<i class="fas fa-book-open"></i>
+Issue Book
+</a>
+
+</li>
+
+
+<li>
+
+<a href="return-book.html">
+<i class="fas fa-undo"></i>
+Return Book
+</a>
+
+</li>
+
+
+<li>
+
+<a href="reports.html">
+<i class="fas fa-chart-line"></i>
+Reports
+</a>
+
+</li>
+
+<li>
+    <a href="donation.html">
+        <i class="fas fa-donate"></i>
+        donation
+    </a>
+</li>
+<li>
+
+<a href="settings.html">
+<i class="fas fa-cog"></i>
+Settings
+</a>
+
+</li>
+
+
+<li>
+
+<a href="index.html">
+<i class="fas fa-sign-out-alt"></i>
+Logout
+</a>
+
+</li>
+
+
+</ul>
+
+
+</div>
+
+
+
+
+
+<!-- MAIN -->
 
 <div class="main">
 
-    <!-- ================= TOPBAR ================= -->
 
-    <header class="topbar">
 
-        <button class="menu-btn" id="menuBtn">
+<!-- TOPBAR -->
 
-            <i class="fas fa-bars"></i>
+<header class="topbar">
 
-        </button>
 
-        <div class="search">
+<button class="menu-btn" id="menuBtn">
 
-            <i class="fas fa-search"></i>
+<i class="fas fa-bars"></i>
 
-            <input
-                type="text"
-                placeholder="Search books, students...">
+</button>
 
-        </div>
 
-        <div class="top-icons">
+<div class="search">
 
-            <button class="icon-btn">
+<i class="fas fa-search"></i>
 
-                <i class="fas fa-bell"></i>
+<input type="text" placeholder="Search books, students...">
 
-                <span class="badge">5</span>
+</div>
 
-            </button>
 
-            <button class="icon-btn" id="themeBtn">
 
-                <i class="fas fa-moon"></i>
+<div class="top-icons">
 
-            </button>
 
-            <div class="profile">
+<button class="icon-btn">
 
-                <img
-                    src="images/admin.png"
-                    alt="Admin"
-                    onerror="this.src='https://via.placeholder.com/45'">
+<i class="fas fa-bell"></i>
 
-                <div>
+<span class="badge">5</span>
 
-                    <h4>Admin</h4>
+</button>
 
-                    <small>Librarian</small>
 
-                </div>
 
-            </div>
+<button class="icon-btn" id="themeBtn">
 
-        </div>
+<i class="fas fa-moon"></i>
 
-    </header>
+</button>
 
-    <!-- ================= PAGE TITLE ================= -->
 
-    <section class="page-title">
 
-        <h1>
+<div class="profile">
 
-            Welcome Back 👋
 
-        </h1>
+<img src="images/admin.png"
+onerror="this.src='https://via.placeholder.com/45'">
 
-        <p>
 
-            Smart Digital Library Management Dashboard
+<div>
 
-        </p>
+<h4>Admin</h4>
 
-    </section>
+<small>Librarian</small>
 
-    <!-- ================= DASHBOARD CARDS ================= -->
-
-    <section class="cards">
-
-        <div class="card">
-
-            <div class="card-icon blue">
-
-                <i class="fas fa-book"></i>
-
-            </div>
-
-            <div>
-
-                <h2 id="totalBooks">0</h2>
-
-                <p>Total Books</p>
-
-            </div>
-
-        </div>
-
-        <div class="card">
-
-            <div class="card-icon green">
-
-                <i class="fas fa-user-graduate"></i>
-
-            </div>
-
-            <div>
-
-                <h2 id="totalStudents">0</h2>
-
-                <p>Total Students</p>
-
-            </div>
-
-        </div>
-
-        <div class="card">
-
-            <div class="card-icon orange">
-
-                <i class="fas fa-book-open"></i>
-
-            </div>
-
-            <div>
-
-                <h2 id="totalIssued">0</h2>
-
-                <p>Issued Books</p>
-
-            </div>
-
-        </div>
-
-        <div class="card">
-
-            <div class="card-icon red">
-
-                <i class="fas fa-undo"></i>
-
-            </div>
-
-            <div>
-
-                <h2 id="totalReturned">0</h2>
-
-                <p>Returned Books</p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- Next sections:
-         Charts
-         Recent Activities
-         Quick Actions
-         Latest Transactions
-         Calendar
-         Footer
-    -->
-<!-- ================= QUICK ACTIONS ================= -->
+</div>
 
 
 </div>
-<section class="quick-actions">
 
-    <h2>Quick Actions</h2>
 
-    <div class="action-grid">
 
-        <a href="books.html" class="action-card">
-            <i class="fas fa-book"></i>
-            <h3>Manage Books</h3>
-        </a>
+</div>
 
-        <a href="student.html" class="action-card">
-            <i class="fas fa-user-graduate"></i>
-            <h3>Students</h3>
-        </a>
 
-        <a href="issue-book.html" class="action-card">
-            <i class="fas fa-book-open"></i>
-            <h3>Issue Book</h3>
-        </a>
+</header>
 
-        <a href="return-book.html" class="action-card">
-            <i class="fas fa-undo"></i>
-            <h3>Return Book</h3>
-        </a>
 
-    </div>
+
+
+
+<!-- TITLE -->
+
+
+<section class="page-title">
+
+
+<h1>
+
+Welcome Back 👋
+
+</h1>
+
+
+<p>
+
+Smart Digital Library Management Dashboard
+
+</p>
+
 
 </section>
 
-<!-- ================= CHART SECTION ================= -->
+
+
+
+
+<!-- CARDS -->
+
+
+<section class="cards">
+
+
+<div class="card">
+
+
+<div class="card-icon blue">
+
+<i class="fas fa-book"></i>
+
+</div>
+
+
+<div>
+
+<h2 id="totalBooks">0</h2>
+
+<p>Total Books</p>
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<div class="card-icon green">
+
+<i class="fas fa-user-graduate"></i>
+
+</div>
+
+
+<div>
+
+<h2 id="totalStudents">0</h2>
+
+<p>Total Students</p>
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<div class="card-icon orange">
+
+<i class="fas fa-book-open"></i>
+
+</div>
+
+
+<div>
+
+<h2 id="totalIssued">0</h2>
+
+<p>Issued Books</p>
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<div class="card-icon red">
+
+<i class="fas fa-undo"></i>
+
+</div>
+
+
+<div>
+
+<h2 id="totalReturned">0</h2>
+
+<p>Returned Books</p>
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- QUICK ACTION -->
+
+
+<section class="quick-actions">
+
+
+<h2>Quick Actions</h2>
+
+
+<div class="action-grid">
+
+
+
+<a href="add-book.html" class="action-card">
+
+<i class="fas fa-book"></i>
+
+<h3>Manage Books</h3>
+
+</a>
+
+
+
+<a href="student.html" class="action-card">
+
+<i class="fas fa-user-graduate"></i>
+
+<h3>Students</h3>
+
+</a>
+
+
+
+<a href="issue-book.html" class="action-card">
+
+<i class="fas fa-book-open"></i>
+
+<h3>Issue Book</h3>
+
+</a>
+
+
+
+<a href="return-book.html" class="action-card">
+
+<i class="fas fa-undo"></i>
+
+<h3>Return Book</h3>
+
+</a>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- CHART -->
+
 
 <section class="chart-section">
 
-    <div class="chart-card">
 
-        <h2>Library Statistics</h2>
+<div class="chart-card">
 
-        <div class="chart-placeholder">
+<h2>Library Statistics</h2>
 
-            Chart.js Graph Here
+<canvas id="barChart"></canvas>
 
-        </div>
+</div>
 
-    </div>
 
-    <div class="chart-card">
 
-        <h2>Book Categories</h2>
+<div class="chart-card">
 
-        <div class="chart-placeholder">
+<h2>Book Categories</h2>
 
-            Pie Chart Here
+<canvas id="pieChart"></canvas>
 
-        </div>
+</div>
 
-    </div>
+
 
 </section>
-<!-- ================= RECENT ACTIVITIES ================= -->
+
+
+
+
+
+<!-- ACTIVITY -->
+
 
 <section class="activity-section">
 
-    <div class="activity-card">
 
-        <h2>Recent Activities</h2>
+<div class="activity-card">
 
-        <ul class="activity-list">
+<h2>Recent Activities</h2>
 
-            <li>
-                <div class="activity-icon">
-                    <i class="fas fa-book"></i>
-                </div>
-                <div class="activity-info">
-                    <h4>Java Programming issued</h4>
-                    <p>2 minutes ago</p>
-                </div>
-            </li>
 
-            <li>
-                <div class="activity-icon">
-                    <i class="fas fa-undo"></i>
-                </div>
-                <div class="activity-info">
-                    <h4>Python Book Returned</h4>
-                    <p>10 minutes ago</p>
-                </div>
-            </li>
+<ul class="activity-list">
 
-            <li>
-                <div class="activity-icon">
-                    <i class="fas fa-user-plus"></i>
-                </div>
-                <div class="activity-info">
-                    <h4>New Student Registered</h4>
-                    <p>30 minutes ago</p>
-                </div>
-            </li>
 
-        </ul>
+<li>
 
-    </div>
+<div class="activity-icon">
+<i class="fas fa-book"></i>
+</div>
 
-    <div class="activity-card">
+<div>
 
-        <h2>Today's Summary</h2>
+<h4>Java Programming issued</h4>
 
-        <p>📚 Books Issued: <strong>12</strong></p>
-        <br>
+<p>2 minutes ago</p>
 
-        <p>📕 Books Returned: <strong>8</strong></p>
-        <br>
+</div>
 
-        <p>👨‍🎓 New Students: <strong>5</strong></p>
-        <br>
+</li>
 
-        <p>💰 Fine Collected: <strong>₹120</strong></p>
 
-    </div>
+
+<li>
+
+<div class="activity-icon">
+<i class="fas fa-undo"></i>
+</div>
+
+<div>
+
+<h4>Python Book Returned</h4>
+
+<p>10 minutes ago</p>
+
+</div>
+
+</li>
+
+
+</ul>
+
+
+</div>
+
+
+
+
+
+<div class="activity-card">
+
+
+<h2>Today's Summary</h2>
+
+
+<p>📚 Books Issued : 12</p>
+
+<br>
+
+<p>📕 Returned : 8</p>
+
+<br>
+
+<p>👨‍🎓 New Students : 5</p>
+
+
+</div>
+
 
 </section>
 
-<!-- ================= LATEST ISSUED BOOKS ================= -->
+
+
+
+
+
+<!-- TABLE -->
+
 
 <section class="table-card">
 
-    <h2>Latest Issued Books</h2>
 
-    <div class="table-responsive">
+<h2>Latest Issued Books</h2>
 
-        <table>
 
-            <thead>
+<div class="table-responsive">
 
-                <tr>
 
-                    <th>Student</th>
-                    <th>Book</th>
-                    <th>Issue Date</th>
-                    <th>Status</th>
+<table>
 
-                </tr>
 
-            </thead>
+<thead>
 
-            <tbody id="latestIssueTable">
+<tr>
 
-            </tbody>
+<th>Student</th>
 
-        </table>
+<th>Book</th>
 
-    </div>
+<th>Date</th>
+
+<th>Status</th>
+
+</tr>
+
+
+</thead>
+
+
+
+<tbody id="latestIssueTable">
+
+
+</tbody>
+
+
+</table>
+
+
+</div>
+
 
 </section>
 
+
+
+
+
+
 <footer class="footer">
 
-    © 2026 Smart Digital Library Management System |
-    Developed by <strong>Mohit Kadav</strong>
+© 2026 Smart Digital Library Management System |
+Developed by <strong>Code titan</strong>
 
 </footer>
+
+
+
+</div>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 <script src="js/dashboard.js"></script>
 
+
 </body>
+
 </html>
