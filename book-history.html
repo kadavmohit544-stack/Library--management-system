@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book History | Smart Library</title>
+
+    <link rel="stylesheet" href="css/book-history.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+
+        <div class="logo">
+            <i class="fa-solid fa-book-open-reader"></i>
+            <span>Smart Library</span>
+        </div>
+
+        <div class="student">
+            <img src="images/student.png" alt="Student">
+            <h3>Book History</h3>
+        </div>
+
+    </header>
+
+    <!-- Main Container -->
+    <section class="container">
+
+        <h1>📚 Book History</h1>
+
+        <!-- Search -->
+        <div class="search-box">
+            <input type="text" id="searchHistory" placeholder="Search Book Name...">
+            <button>
+                <i class="fa-solid fa-search"></i>
+            </button>
+        </div>
+
+        <!-- History Table -->
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>Book Image</th>
+                    <th>Book Name</th>
+                    <th>Author</th>
+                    <th>Issue Date</th>
+                    <th>Return Date</th>
+                    <th>Status</th>
+                    <th>Rating</th>
+                </tr>
+
+            </thead>
+
+            <tbody id="historyTable">
+
+                <tr>
+                    <td><img src="images/java.jpg" alt="Java"></td>
+                    <td>Java Programming</td>
+                    <td>Herbert Schildt</td>
+                    <td>01-06-2026</td>
+                    <td>15-06-2026</td>
+                    <td><span class="returned">Returned</span></td>
+                    <td>⭐⭐⭐⭐⭐</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/python.jpg" alt="Python"></td>
+                    <td>Python Programming</td>
+                    <td>Guido van Rossum</td>
+                    <td>10-05-2026</td>
+                    <td>24-05-2026</td>
+                    <td><span class="returned">Returned</span></td>
+                    <td>⭐⭐⭐⭐</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/html.jpg" alt="HTML"></td>
+                    <td>HTML & CSS</td>
+                    <td>Jon Duckett</td>
+                    <td>15-04-2026</td>
+                    <td>30-04-2026</td>
+                    <td><span class="late">Late Return</span></td>
+                    <td>⭐⭐⭐⭐⭐</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/javascript.jpg" alt="JavaScript"></td>
+                    <td>JavaScript</td>
+                    <td>David Flanagan</td>
+                    <td>01-03-2026</td>
+                    <td>18-03-2026</td>
+                    <td><span class="returned">Returned</span></td>
+                    <td>⭐⭐⭐⭐</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/dbms.jpg" alt="DBMS"></td>
+                    <td>Database Management System</td>
+                    <td>Korth</td>
+                    <td>05-02-2026</td>
+                    <td>20-02-2026</td>
+                    <td><span class="returned">Returned</span></td>
+                    <td>⭐⭐⭐⭐⭐</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+        <!-- Summary Cards -->
+        <div class="summary">
+
+            <div class="card">
+                <h3>Total Books Read</h3>
+                <p>25</p>
+            </div>
+
+            <div class="card">
+                <h3>Books Returned</h3>
+                <p>24</p>
+            </div>
+
+            <div class="card">
+                <h3>Late Returns</h3>
+                <p>1</p>
+            </div>
+
+        </div>
+
+        <!-- Back Button -->
+        <div class="back-btn">
+
+            <a href="student-dashboard.html">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back to Dashboard
+            </a>
+
+        </div>
+
+    </section>
+
+    <script src="js/book-history.js"></script>
+
+</body>
+
+</html>

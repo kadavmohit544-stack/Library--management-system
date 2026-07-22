@@ -1,243 +1,231 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Contact Us | Smart Digital Library</title>
+    <title>Contact Us | Smart Digital Library</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-<link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/contact.css">
 
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
+    <!-- ================= HEADER ================= -->
 
-<header>
+    <header>
 
-<nav class="navbar">
+        <nav class="navbar">
 
-<div class="logo">
+            <div class="logo">
 
-<i class="fa-solid fa-book-open-reader"></i>
+                <i class="fa-solid fa-book-open-reader"></i>
 
-<span>Smart Library</span>
+                <span>Smart Library</span>
 
-</div>
+            </div>
 
-<ul class="nav-menu">
+            <ul class="nav-menu">
 
-<li><a href="index.html">Home</a></li>
-<li><a href="books.html">Books</a></li>
-<li><a href="categories.html">Categories</a></li>
-<li><a href="digital-library.html">Digital Library</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="digital-library.html">Digital Library</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
 
-</ul>
+            </ul>
 
-<div class="buttons">
+            <div class="buttons">
 
-<button onclick="location.href='login.html'">Login</button>
+                <button onclick="location.href='login.html'">Login</button>
 
-<button onclick="location.href='register.html'">Register</button>
+                <button onclick="location.href='register.html'">Register</button>
 
-</div>
+            </div>
 
-</nav>
+        </nav>
 
-</header>
+    </header>
 
-<!-- ================= HERO ================= -->
+    <!-- ================= HERO ================= -->
 
-<section class="contact-hero">
+    <section class="contact-hero">
 
-<div class="overlay">
+        <div class="overlay">
 
-<h1>Contact Us</h1>
+            <h1>Contact Us</h1>
 
-<p>
+            <p>
+                We are always ready to help you.
+            </p>
 
-We are always ready to help you.
+        </div>
 
-</p>
+    </section>
 
-</div>
+    <!-- ================= CONTACT INFO ================= -->
 
-</section>
+    <section class="contact-info">
 
-<!-- ================= CONTACT INFO ================= -->
+        <div class="info-card">
 
-<section class="contact-info">
+            <i class="fas fa-map-marker-alt"></i>
 
-<div class="info-card">
+            <h3>Address</h3>
 
-<i class="fas fa-map-marker-alt"></i>
+            <p>
+                Government Polytechnic Gondia (GPG)<br>
+                Fulchur, Gondia,<br>
+                Maharashtra - 441601
+            </p>
 
-<h3>Address</h3>
+        </div>
 
-<p>
+        <div class="info-card">
 
-ABC Engineering College
+            <i class="fas fa-phone"></i>
 
-Nagpur, Maharashtra
+            <h3>Phone</h3>
 
-</p>
+            <p>
+                +91 9876543210
+            </p>
 
-</div>
+        </div>
 
-<div class="info-card">
+        <div class="info-card">
 
-<i class="fas fa-phone"></i>
+            <i class="fas fa-envelope"></i>
 
-<h3>Phone</h3>
+            <h3>Email</h3>
 
-<p>
+            <p>
+                library@gpgondia.ac.in
+            </p>
 
-+91 9876543210
+        </div>
 
-</p>
+        <div class="info-card">
 
-</div>
+            <i class="fas fa-clock"></i>
 
-<div class="info-card">
+            <h3>Opening Hours</h3>
 
-<i class="fas fa-envelope"></i>
+            <p>
+                Mon - Sat<br>
+                9:00 AM - 6:00 PM
+            </p>
 
-<h3>Email</h3>
+        </div>
 
-<p>
+    </section>
 
-library@college.edu
+    <!-- ================= CONTACT FORM ================= -->
 
-</p>
+    <section class="contact-section">
 
-</div>
+        <div class="contact-form">
 
-<div class="info-card">
+            <h2>Send Message</h2>
 
-<i class="fas fa-clock"></i>
+            <form id="contactForm">
 
-<h3>Opening Hours</h3>
+                <input
+                    type="text"
+                    placeholder="Full Name"
+                    required>
 
-<p>
+                <input
+                    type="email"
+                    placeholder="Email Address"
+                    required>
 
-Mon - Sat
+                <input
+                    type="text"
+                    placeholder="Subject"
+                    required>
 
-9:00 AM - 6:00 PM
+                <textarea
+                    rows="7"
+                    placeholder="Write your message..."
+                    required></textarea>
 
-</p>
+                <button type="submit">
+                    Send Message
+                </button>
 
-</div>
+            </form>
 
-</section>
+        </div>
 
-<!-- ================= CONTACT FORM ================= -->
+        <!-- ================= GOOGLE MAP ================= -->
 
-<section class="contact-section">
+        <div class="map">
 
-<div class="contact-form">
+            <iframe
+                src="https://www.google.com/maps?q=Government+Polytechnic+Gondia,+Gondia,+Maharashtra&output=embed"
+                width="100%"
+                height="450"
+                style="border:0;"
+                loading="lazy"
+                allowfullscreen>
+            </iframe>
 
-<h2>Send Message</h2>
+        </div>
 
-<form id="contactForm">
+    </section>
 
-<input
-type="text"
-placeholder="Full Name"
-required>
+    <!-- ================= SOCIAL ================= -->
 
-<input
-type="email"
-placeholder="Email Address"
-required>
+    <section class="social">
 
-<input
-type="text"
-placeholder="Subject"
-required>
+        <h2>Follow Us</h2>
 
-<textarea
-rows="7"
-placeholder="Write your message..."
-required></textarea>
+        <div class="icons">
 
-<button type="submit">
+            <a href="#"><i class="fab fa-facebook"></i></a>
 
-Send Message
+            <a href="#"><i class="fab fa-instagram"></i></a>
 
-</button>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
 
-</form>
+            <a href="#"><i class="fab fa-youtube"></i></a>
 
-</div>
+            <a href="#"><i class="fab fa-github"></i></a>
 
-<div class="map">
+        </div>
 
-<iframe
+    </section>
 
-src="https://www.google.com/maps?q=Nagpur&output=embed"
+    <!-- ================= FOOTER ================= -->
 
-loading="lazy"
+    <footer>
 
-allowfullscreen>
+        <p>
 
-</iframe>
+            © 2026 Smart Digital Library Management System
 
-</div>
+            <br>
 
-</section>
+            Designed By
 
-<!-- ================= SOCIAL ================= -->
+<strong>Mohit Kadav</strong>
 
-<section class="social">
+        </p>
 
-<h2>Follow Us</h2>
+    </footer>
 
-<div class="icons">
-
-<a href="#"><i class="fab fa-facebook"></i></a>
-
-<a href="#"><i class="fab fa-instagram"></i></a>
-
-<a href="#"><i class="fab fa-linkedin"></i></a>
-
-<a href="#"><i class="fab fa-youtube"></i></a>
-
-<a href="#"><i class="fab fa-github"></i></a>
-
-</div>
-
-</section>
-
-<!-- ================= FOOTER ================= -->
-
-<footer>
-
-<p>
-
-© 2026 Smart Digital Library Management System
-
-<br>
-
-Designed By
-
-<strong>code titan</strong>
-
-</p>
-
-</footer>
-
-<script src="js/contact.js"></script>
+    <script src="js/contact.js"></script>
 
 </body>
 

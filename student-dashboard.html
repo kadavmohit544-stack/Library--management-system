@@ -1,0 +1,271 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard | Smart Digital Library</title>
+
+    <link rel="stylesheet" href="css/student-dashboard.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+
+        <div class="logo">
+            <i class="fa-solid fa-book-open-reader"></i>
+            <span>Smart Library</span>
+        </div>
+
+        <div class="student-info">
+
+            <img src="images/student.png" alt="Student">
+
+            <div>
+                <h3>Chunendra Damahe</h3>
+                <small id="dateTime"></small>
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- Dashboard -->
+    <div class="dashboard">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <ul>
+
+                <li class="active">
+                    <a href="student-dashboard.html">
+                        <i class="fa-solid fa-house"></i>
+                        Dashboard
+                    </a>
+                </li>
+
+                <li>
+                    <a href="student-profile.html">
+                        <i class="fa-solid fa-user"></i>
+                        My Profile
+                    </a>
+                </li>
+
+                <li>
+                    <a href="issued-books.html">
+                        <i class="fa-solid fa-book"></i>
+                        Issued Books
+                    </a>
+                </li>
+
+                <li>
+                    <a href="book-history.html">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                        Book History
+                    </a>
+                </li>
+
+                <li>
+                    <a href="settings.html">
+                        <i class="fa-solid fa-gear"></i>
+                        Settings
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" onclick="logout()">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        Logout
+                    </a>
+                </li>
+
+            </ul>
+
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <h1>Welcome Back 👋</h1>
+
+            <!-- Dashboard Cards -->
+
+            <div class="cards">
+
+                <div class="card">
+                    <i class="fa-solid fa-book"></i>
+                    <h2>Issued Books</h2>
+                    <p>05</p>
+                </div>
+
+                <div class="card">
+                    <i class="fa-solid fa-check-circle"></i>
+                    <h2>Returned Books</h2>
+                    <p>12</p>
+                </div>
+
+                <div class="card">
+                    <i class="fa-solid fa-hourglass-half"></i>
+                    <h2>Pending Books</h2>
+                    <p>02</p>
+                </div>
+
+                <div class="card">
+                    <i class="fa-solid fa-indian-rupee-sign"></i>
+                    <h2>Fine</h2>
+                    <p>₹0</p>
+                </div>
+
+            </div>
+
+            <!-- Quick Actions -->
+
+            <section class="quick-actions">
+
+                <h2>Quick Actions</h2>
+
+                <div class="action-buttons">
+
+                    <a href="issued-books.html" class="action-btn">
+                        <i class="fa-solid fa-book"></i>
+                        My Books
+                    </a>
+
+                    <a href="book-history.html" class="action-btn">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                        History
+                    </a>
+
+                    <a href="settings.html" class="action-btn">
+                        <i class="fa-solid fa-gear"></i>
+                        Settings
+                    </a>
+
+                    <a href="student-profile.html" class="action-btn">
+                        <i class="fa-solid fa-user"></i>
+                        Profile
+                    </a>
+
+                </div>
+
+            </section>
+
+            <!-- Reading Progress -->
+
+            <section class="progress-section">
+
+                <h2>Reading Progress</h2>
+
+                <div class="progress-bar">
+
+                    <div class="progress">
+                        70%
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Recent Activity -->
+
+            <section class="activity">
+
+                <h2>Recent Activity</h2>
+
+                <ul>
+
+                    <li>📖 Java Programming book issued successfully.</li>
+
+                    <li>📚 Python Programming returned.</li>
+
+                    <li>🔔 No pending fine.</li>
+
+                    <li>✅ Profile updated successfully.</li>
+
+                </ul>
+
+            </section>
+
+            <!-- Announcements -->
+
+            <section class="announcement">
+
+                <h2>Library Announcements</h2>
+
+                <div class="notice">
+
+                    <p>📢 Library Timing: 9:00 AM - 6:00 PM</p>
+
+                    <p>📢 AI & Data Science books are now available.</p>
+
+                    <p>📢 Return all books before 30 July.</p>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <!-- Footer -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div>
+
+                <h3>Smart Digital Library</h3>
+
+                <p>
+                    Government Polytechnic Gondia
+                </p>
+
+            </div>
+
+            <div>
+
+                <h3>Quick Links</h3>
+
+                <p><a href="student-dashboard.html">Dashboard</a></p>
+
+                <p><a href="issued-books.html">Books</a></p>
+
+                <p><a href="settings.html">Settings</a></p>
+
+            </div>
+
+            <div>
+
+                <h3>Contact</h3>
+
+                <p>📧 student@gpgondia.ac.in</p>
+
+                <p>📞 +91 9876543210</p>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <p class="copyright">
+            © 2026 Smart Digital Library Management System |
+            Designed by <strong>Code Titan</strong>
+        </p>
+
+    </footer>
+
+    <script src="js/student-dashboard.js"></script>
+
+</body>
+
+</html>
+```

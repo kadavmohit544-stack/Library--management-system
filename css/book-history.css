@@ -1,0 +1,561 @@
+/* =====================================
+   Google Font
+===================================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* =====================================
+   Reset
+===================================== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+    color:#333;
+}
+
+/* =====================================
+   Header
+===================================== */
+.header{
+    width:100%;
+    height:70px;
+    background:#1e3a8a;
+    color:#fff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 40px;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:24px;
+    font-weight:600;
+}
+
+.logo i{
+    color:#ffd43b;
+}
+
+.student{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.student img{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    border:2px solid #fff;
+}
+
+.student h3{
+    font-size:18px;
+}
+
+/* =====================================
+   Container
+===================================== */
+.container{
+    width:95%;
+    max-width:1300px;
+    margin:100px auto 40px;
+}
+
+.container h1{
+    color:#1e3a8a;
+    margin-bottom:25px;
+}
+
+/* =====================================
+   Search Box
+===================================== */
+.search-box{
+    display:flex;
+    justify-content:flex-end;
+    margin-bottom:20px;
+}
+
+.search-box input{
+    width:300px;
+    padding:12px;
+    border:2px solid #2563eb;
+    border-radius:8px 0 0 8px;
+    outline:none;
+}
+
+.search-box button{
+    width:50px;
+    border:none;
+    background:#2563eb;
+    color:#fff;
+    border-radius:0 8px 8px 0;
+    cursor:pointer;
+}
+
+.search-box button:hover{
+    background:#1d4ed8;
+}
+
+/* =====================================
+   Table
+===================================== */
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:#fff;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+    border-radius:10px;
+    overflow:hidden;
+}
+
+thead{
+    background:#1e3a8a;
+    color:#fff;
+}
+
+th,
+td{
+    padding:15px;
+    text-align:center;
+}
+
+tbody tr{
+    border-bottom:1px solid #ddd;
+    transition:.3s;
+}
+
+tbody tr:hover{
+    background:#eef4ff;
+}
+
+td img{
+    width:60px;
+    height:80px;
+    object-fit:cover;
+    border-radius:5px;
+}
+
+/* =====================================
+   Status Badges
+===================================== */
+.returned{
+    background:#16a34a;
+    color:#fff;
+    padding:6px 14px;
+    border-radius:20px;
+    font-size:14px;
+    font-weight:600;
+}
+
+.late{
+    background:#dc2626;
+    color:#fff;
+    padding:6px 14px;
+    border-radius:20px;
+    font-size:14px;
+    font-weight:600;
+}
+
+/* =====================================
+   Summary Cards
+===================================== */
+.summary{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    margin-top:30px;
+}
+
+.card{
+    background:#fff;
+    padding:25px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h3{
+    color:#555;
+    margin-bottom:10px;
+}
+
+.card p{
+    font-size:30px;
+    color:#2563eb;
+    font-weight:bold;
+}
+
+/* =====================================
+   Back Button
+===================================== */
+.back-btn{
+    margin-top:30px;
+}
+
+.back-btn a{
+    display:inline-block;
+    text-decoration:none;
+    background:#2563eb;
+    color:#fff;
+    padding:12px 22px;
+    border-radius:8px;
+    transition:.3s;
+}
+
+.back-btn a:hover{
+    background:#1d4ed8;
+}
+
+/* =====================================
+   Responsive
+===================================== */
+@media(max-width:900px){
+
+    .header{
+        padding:0 20px;
+    }
+
+    .student h3{
+        display:none;
+    }
+
+    table{
+        display:block;
+        overflow-x:auto;
+    }
+
+    .search-box{
+        justify-content:center;
+    }
+
+    .search-box input{
+        width:220px;
+    }
+
+}
+
+@media(max-width:600px){
+
+    .logo{
+        font-size:18px;
+    }
+
+    .container h1{
+        font-size:24px;
+    }
+
+    th,
+    td{
+        padding:10px;
+        font-size:14px;
+    }
+
+    td img{
+        width:45px;
+        height:60px;
+    }
+
+    .summary{
+        grid-template-columns:1fr;
+    }
+
+}/* =====================================
+   Google Font
+===================================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* =====================================
+   Reset
+===================================== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+    color:#333;
+}
+
+/* =====================================
+   Header
+===================================== */
+.header{
+    width:100%;
+    height:70px;
+    background:#1e3a8a;
+    color:#fff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 40px;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:24px;
+    font-weight:600;
+}
+
+.logo i{
+    color:#ffd43b;
+}
+
+.student{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.student img{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    border:2px solid #fff;
+}
+
+.student h3{
+    font-size:18px;
+}
+
+/* =====================================
+   Container
+===================================== */
+.container{
+    width:95%;
+    max-width:1300px;
+    margin:100px auto 40px;
+}
+
+.container h1{
+    color:#1e3a8a;
+    margin-bottom:25px;
+}
+
+/* =====================================
+   Search Box
+===================================== */
+.search-box{
+    display:flex;
+    justify-content:flex-end;
+    margin-bottom:20px;
+}
+
+.search-box input{
+    width:300px;
+    padding:12px;
+    border:2px solid #2563eb;
+    border-radius:8px 0 0 8px;
+    outline:none;
+}
+
+.search-box button{
+    width:50px;
+    border:none;
+    background:#2563eb;
+    color:#fff;
+    border-radius:0 8px 8px 0;
+    cursor:pointer;
+}
+
+.search-box button:hover{
+    background:#1d4ed8;
+}
+
+/* =====================================
+   Table
+===================================== */
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:#fff;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+    border-radius:10px;
+    overflow:hidden;
+}
+
+thead{
+    background:#1e3a8a;
+    color:#fff;
+}
+
+th,
+td{
+    padding:15px;
+    text-align:center;
+}
+
+tbody tr{
+    border-bottom:1px solid #ddd;
+    transition:.3s;
+}
+
+tbody tr:hover{
+    background:#eef4ff;
+}
+
+td img{
+    width:60px;
+    height:80px;
+    object-fit:cover;
+    border-radius:5px;
+}
+
+/* =====================================
+   Status Badges
+===================================== */
+.returned{
+    background:#16a34a;
+    color:#fff;
+    padding:6px 14px;
+    border-radius:20px;
+    font-size:14px;
+    font-weight:600;
+}
+
+.late{
+    background:#dc2626;
+    color:#fff;
+    padding:6px 14px;
+    border-radius:20px;
+    font-size:14px;
+    font-weight:600;
+}
+
+/* =====================================
+   Summary Cards
+===================================== */
+.summary{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    margin-top:30px;
+}
+
+.card{
+    background:#fff;
+    padding:25px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h3{
+    color:#555;
+    margin-bottom:10px;
+}
+
+.card p{
+    font-size:30px;
+    color:#2563eb;
+    font-weight:bold;
+}
+
+/* =====================================
+   Back Button
+===================================== */
+.back-btn{
+    margin-top:30px;
+}
+
+.back-btn a{
+    display:inline-block;
+    text-decoration:none;
+    background:#2563eb;
+    color:#fff;
+    padding:12px 22px;
+    border-radius:8px;
+    transition:.3s;
+}
+
+.back-btn a:hover{
+    background:#1d4ed8;
+}
+
+/* =====================================
+   Responsive
+===================================== */
+@media(max-width:900px){
+
+    .header{
+        padding:0 20px;
+    }
+
+    .student h3{
+        display:none;
+    }
+
+    table{
+        display:block;
+        overflow-x:auto;
+    }
+
+    .search-box{
+        justify-content:center;
+    }
+
+    .search-box input{
+        width:220px;
+    }
+
+}
+
+@media(max-width:600px){
+
+    .logo{
+        font-size:18px;
+    }
+
+    .container h1{
+        font-size:24px;
+    }
+
+    th,
+    td{
+        padding:10px;
+        font-size:14px;
+    }
+
+    td img{
+        width:45px;
+        height:60px;
+    }
+
+    .summary{
+        grid-template-columns:1fr;
+    }
+
+}

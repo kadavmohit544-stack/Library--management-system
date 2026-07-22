@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Issued Books | Smart Library</title>
+
+    <link rel="stylesheet" href="css/issued-books.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+
+        <div class="logo">
+            <i class="fa-solid fa-book-open-reader"></i>
+            <span>Smart Library</span>
+        </div>
+
+        <div class="student">
+            <img src="images/student.png" alt="Student">
+            <h3>Issued Books</h3>
+        </div>
+
+    </header>
+
+    <!-- Main Section -->
+    <section class="container">
+
+        <h1>📚 My Issued Books</h1>
+
+        <!-- Search -->
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search by Book Name...">
+            <button><i class="fa-solid fa-search"></i></button>
+        </div>
+
+        <!-- Books Table -->
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>Book Image</th>
+                    <th>Book Name</th>
+                    <th>Author</th>
+                    <th>Issue Date</th>
+                    <th>Due Date</th>
+                    <th>Status</th>
+                </tr>
+
+            </thead>
+
+            <tbody id="bookTable">
+
+                <tr>
+                    <td>
+                        <img src="images/java.jpg" alt="Java Book">
+                    </td>
+                    <td>Java Programming</td>
+                    <td>Herbert Schildt</td>
+                    <td>01-07-2026</td>
+                    <td>15-07-2026</td>
+                    <td><span class="issued">Issued</span></td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <img src="images/python.jpg" alt="Python Book">
+                    </td>
+                    <td>Python Programming</td>
+                    <td>Guido van Rossum</td>
+                    <td>05-07-2026</td>
+                    <td>20-07-2026</td>
+                    <td><span class="due">Due</span></td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <img src="images/html.jpg" alt="HTML Book">
+                    </td>
+                    <td>HTML & CSS</td>
+                    <td>Jon Duckett</td>
+                    <td>10-07-2026</td>
+                    <td>25-07-2026</td>
+                    <td><span class="issued">Issued</span></td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <img src="images/javascript.jpg" alt="JavaScript Book">
+                    </td>
+                    <td>JavaScript</td>
+                    <td>David Flanagan</td>
+                    <td>12-07-2026</td>
+                    <td>27-07-2026</td>
+                    <td><span class="issued">Issued</span></td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <img src="images/dbms.jpg" alt="DBMS Book">
+                    </td>
+                    <td>Database Management System</td>
+                    <td>Korth</td>
+                    <td>15-07-2026</td>
+                    <td>30-07-2026</td>
+                    <td><span class="issued">Issued</span></td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+        <!-- Back Button -->
+        <div class="back-btn">
+            <a href="student-dashboard.html">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back to Dashboard
+            </a>
+        </div>
+
+    </section>
+
+    <script src="js/issued-books.js"></script>
+
+</body>
+
+</html>
